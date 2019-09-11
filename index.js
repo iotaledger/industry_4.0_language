@@ -205,3 +205,10 @@ const getTemplate = (type) => {
             return null;
     }
 }
+
+module.exports = {
+    generate,
+    evaluate,
+    operations,
+    submodel
+}
