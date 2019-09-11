@@ -11,7 +11,7 @@ const informPayment = require('./templates/informPayment.json');
 /**
  * 1. For CfP message type returns list of operations (plain text)
  */
-const operations = () => {
+export const operations = () => {
     return available_operations;
 }
 
@@ -19,7 +19,7 @@ const operations = () => {
  * 1. Performs lookup in the eCl@ss catalog, retrieves submodel  
  * 2. Returns submodel without price property
  */
-const submodel = (irdi) => {
+export const submodel = (irdi) => {
     return eClass[irdi].submodelElements.filter(({ idShort }) => !['preis', 'price'].includes(idShort));
 }
 
@@ -27,7 +27,7 @@ const submodel = (irdi) => {
  * 1. Evaluates values  
  * 2. Returns success or failure notification
  */
-const evaluate = (irdi, values) => {
+export const evaluate = (irdi, values) => {
     const submodelTemplate = submodel(irdi);
     let status;
     submodelTemplate.some(element => {
@@ -102,7 +102,7 @@ const checkType = (type, value) => {
  * 2. Fills placeholder JSON for selected message type with provided values, appends submodel  
  * 3. Returns generated message of the selected type (CfP, Proposal, etc.)  
  */
-const generate = ({ 
+export const generate = ({ 
     messageType, 
     userId, 
     irdi, 
@@ -204,11 +204,4 @@ const getTemplate = (type) => {
         default:
             return null;
     }
-}
-
-module.exports = {
-    generate,
-    evaluate,
-    operations,
-    submodel
 }

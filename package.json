@@ -1,17 +1,14 @@
 {
     "name": "@iota/industry_4.0_language",
     "description": "Industry_4.0_Language",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "author": "Alexey Sobolev <alexey@iota.org>",
     "repository": {
         "type": "git",
-        "url": "https://github.com/iotaledger/industry-marketplace.git"
+        "url": "https://github.com/iotaledger/industry_4.0_language.git"
     },
     "license": "Apache-2.0",
-    "main": "lib/index.js",
-    "scripts": {
-        "build": "webpack"
-    },
+    "main": "./index.js",
     "engines": {
         "node": ">=6"
     },
