@@ -206,9 +206,9 @@ const getTemplate = (type) => {
     }
 }
 
-module.exports = {
-    generate,
-    evaluate,
-    operations,
-    submodel
-}
+// module.exports = {
+//     generate,
+//     evaluate,
+//     operations,
+//     submodel
+// }
