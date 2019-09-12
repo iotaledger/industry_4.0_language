@@ -6,3 +6,6 @@
 # build artifacts
 .DS_Store
 *.log
+
+.babelrc
+webpack.config.js
