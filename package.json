@@ -8,7 +8,7 @@
         "url": "https://github.com/iotaledger/industry_4.0_language.git"
     },
     "license": "Apache-2.0",
-    "main": "./build/index.js",
+    "main": "./lib/index.js",
     "engines": {
         "node": ">=6"
     },
