@@ -116,7 +116,7 @@ export const generate = ({
     creationDate = null,
     userName = null,
 }) => {
-    const message = getTemplate(messageType);
+    let message = getTemplate(messageType);
     if (!message) {
         return null;
     }
@@ -125,16 +125,17 @@ export const generate = ({
     message.userName = userName;
 
     if (originalMessage && messageType !== 'callForProposal') {
-        message.frame.conversationId = originalMessage.frame.conversationId;
-        message.frame.receiver.identification.id = originalMessage.frame.sender.identification.id;
-        message.dataElements = originalMessage.dataElements;
-        message.frame.location = originalMessage.frame.location;
-        message.frame.startTimestamp = originalMessage.frame.startTimestamp;
-        message.frame.endTimestamp = originalMessage.frame.endTimestamp;
-        message.frame.creationDate = originalMessage.frame.creationDate;
+        const { dataElements, frame, walletAddress, ...additionalParams } = originalMessage;
+        message.frame.conversationId = frame.conversationId;
+        message.frame.receiver.identification.id = frame.sender.identification.id;
+        message.dataElements = dataElements;
+        message.frame.location = frame.location;
+        message.frame.startTimestamp = frame.startTimestamp;
+        message.frame.endTimestamp = frame.endTimestamp;
+        message.frame.creationDate = frame.creationDate;
 
-        if (originalMessage.walletAddress) {
-            message.walletAddress = originalMessage.walletAddress;
+        if (walletAddress) {
+            message.walletAddress = walletAddress;
         }
 
         if (messageType === 'proposal' && price && irdi) {
@@ -147,6 +148,9 @@ export const generate = ({
             updatedModel.push(priceModel);
             message.dataElements.submodels[0].identification.submodelElements = updatedModel;
         }
+
+        // append additional params from earlier messages, like sensor data or DID
+        message = { ...message, ...additionalParams };
     } else if (irdi && messageType === 'callForProposal') {
         message.frame.conversationId = uuid();
 
