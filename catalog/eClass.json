@@ -300,6 +300,73 @@
             }
         ]
     },
+    "0173-1#01-BAH005#005": {
+        "submodelElements":[
+            {
+                "idShort":"rated voltage [V]",
+                "modelType":"Property",
+                "value":"",
+                "valueType":"long",
+                "semanticId":"0173-1#02-BAH005#005"
+            },
+            {
+                "idShort":"enveloping body type",
+                "modelType":"Property",
+                "value":"",
+                "valueType":"boolean",
+                "semanticId":"0173-1#02-AAN483#001"
+            },
+            {
+                "idShort":"depth [mm]",
+                "modelType":"Property",
+                "value":"",
+                "valueType":"decimal",
+                "semanticId":"0173-1#02-BAB577#006"
+            },
+            {
+                "idShort":"width [mm]",
+                "modelType":"Property",
+                "value":"",
+                "valueType":"decimal",
+                "semanticId":"0173-1#02-BAF016#004"
+            },
+            {
+                "idShort":"height [mm]",
+                "modelType":"Property",
+                "value":"",
+                "valueType":"double",
+                "semanticId":"0173-1#02-BAA020#007"
+            },
+            {
+                "idShort":"net weight [kg]",
+                "modelType":"Property",
+                "value":"",
+                "valueType":"decimal",
+                "semanticId":"0173-1#02-AAF040#004"
+            },
+            {
+                "idShort":"width of spacing [mm]",
+                "modelType":"Property",
+                "value":"",
+                "valueType":"double",
+                "semanticId":"0173-1#02-BAC137#005"
+            },
+            {
+                "idShort":"closing plate required",
+                "modelType":"Property",
+                "value":"",
+                "valueType":"boolean",
+                "semanticId":"0173-1#02-BAD774#008"
+            },
+            {
+                "idShort":"price",
+                "modelType":"Property",
+                "value":"",
+                "valueType":"integer",
+                "semanticId":"0173-1#02-AAO739#001"
+            }
+        ]
+    },
     "0173-1#01-BAF777#004": {
         "submodelElements":[
             {

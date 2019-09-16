@@ -1,6 +1,6 @@
 [
     {
-        "name": "Drone Transport",
+        "name": "Drone transport",
         "description": "A drone with transport capability is requested to transport a package from A to B",
         "id":"0173-1#01-AAJ336#002"
     },
@@ -15,7 +15,7 @@
         "id":"0173-1#01-AAI711#001"
     },
     {
-        "name": "EV Charging",
+        "name": "EV charging",
         "description": "A manned or autonomous vehicle is requesting an available EV chaging slot at a nearby location or along a future route/location",
         "id":"0173-1#01-AAO742#002"
     },
@@ -35,12 +35,17 @@
         "id":"0173-1#01-BAF575#004"
     },
     {
-        "name": "Weather Data",
+        "name": "Purchasable good",
+        "description": "Feed-through modular terminal block",
+        "id":"0173-1#01-BAH005#005"
+    },
+    {
+        "name": "Weather data",
         "description": "",
         "id":"0173-1#01-BAF777#004"
     },
     {
-        "name": "Sensor Data",
+        "name": "Sensor data",
         "description": "An industrial plant equipped with sensors offering the access to the sensor data during a certain window in time.",
         "id":"0173-1#01-BAF888#004"
     }
