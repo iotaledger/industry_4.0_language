@@ -1,7 +1,7 @@
 {
     "name": "@iota/industry_4.0_language",
     "description": "Industry_4.0_Language",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "author": "Alexey Sobolev <alexey@iota.org>",
     "repository": {
         "type": "git",
